@@ -1,0 +1,253 @@
+<!doctype html>
+{% extends 'showroom/homepage.html' %}
+{% load crispy_forms_tags %}
+    {% block body_block %}
+
+
+
+<main>
+
+{% for forms in page_obj %}
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+
+             <img id="myImg" src="{{forms.Front_Side_Image.url}}" width="100%" height="225" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Front Side</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">{{forms.date}}</small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+              <img id="myImg1"  src="{{forms.Back_Side_Image.url}}" width="100%" height="225" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Back Side</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">{{forms.date}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+              <img id="myImg2" src="{{forms.Left_Side_Image.url}}" width="100%" height="225" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Left Side</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">{{forms.date}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+              <img id="myImg3" src="{{forms.Right_Side_Image.url}}" width="100%" height="225" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Right Side</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">{{forms.date}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+              <img id="myImg4" src="{{forms.Car_Interior_Image.url}}" width="100%" height="225" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Car Interior</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">{{froms.date}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img id="myImg5" src="{{forms.Car_Stereo_And_Camera.url}}" width="100%" height="225" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Car Stereo And Camera</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">{{forms.date}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+             <img id="myImg6" src="{{forms.Car_Seat_Image.url}}" width="100%" height="225" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Car Seat</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">{{forms.date}}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  <hr>
+
+  </div>
+  {% endfor %}
+
+</main>
+
+  <!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+</div>
+<div id="myModal1" class="modal">
+  <span1 class="close1">&times;</span1>
+  <img class="modal-content" id="img02">
+</div>
+<div id="myModal2" class="modal">
+  <span2 class="close2">&times;</span2>
+  <img class="modal-content" id="img03">
+</div>
+<div id="myModal3" class="modal">
+  <span3 class="close3">&times;</span3>
+  <img class="modal-content" id="img04">
+</div>
+<div id="myModal4" class="modal">
+  <span4 class="close4">&times;</span4>
+  <img class="modal-content" id="img05">
+</div>
+<div id="myModal5" class="modal">
+  <span4 class="close5">&times;</span4>
+  <img class="modal-content" id="img06">
+</div>
+<div id="myModal6" class="modal">
+  <span5 class="close6">&times;</span5>
+  <img class="modal-content" id="img07">
+</div>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  var modal1 = document.getElementById("myModal1");
+  var modal2 = document.getElementById("myModal2");
+  var modal3 = document.getElementById("myModal3");
+  var modal4 = document.getElementById("myModal4");
+  var modal5 = document.getElementById("myModal5");
+  var modal6 = document.getElementById("myModal6");
+
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg");
+  var modalImg = document.getElementById("img01");
+  var img1 = document.getElementById("myImg1");
+  var modalImg1 = document.getElementById("img02");
+  var img2 = document.getElementById("myImg2");
+  var modalImg2 = document.getElementById("img03");
+  var img3 = document.getElementById("myImg3");
+  var modalImg3 = document.getElementById("img04");
+  var img4 = document.getElementById("myImg4");
+  var modalImg4 = document.getElementById("img05");
+  var img5 = document.getElementById("myImg5");
+  var modalImg5 = document.getElementById("img06");
+  var img6 = document.getElementById("myImg6");
+  var modalImg6 = document.getElementById("img07");
+
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+  img1.onclick = function(){
+    modal1.style.display = "block";
+    modalImg1.src = this.src;
+  }
+  img2.onclick = function(){
+    modal2.style.display = "block";
+    modalImg2.src = this.src;
+  }
+  img3.onclick = function(){
+    modal3.style.display = "block";
+    modalImg3.src = this.src;
+  }
+
+  img4.onclick = function(){
+    modal4.style.display = "block";
+    modalImg4.src = this.src;
+  }
+  img5.onclick = function(){
+    modal5.style.display = "block";
+    modalImg5.src = this.src;
+  }
+  img6.onclick = function(){
+    modal6.style.display = "block";
+    modalImg6.src = this.src;
+  }
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  var span1 = document.getElementsByClassName("close1")[0];
+  var span2 = document.getElementsByClassName("close2")[0];
+  var span3 = document.getElementsByClassName("close3")[0];
+  var span4 = document.getElementsByClassName("close4")[0];
+  var span5 = document.getElementsByClassName("close5")[0];
+  var span6 = document.getElementsByClassName("close6")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  span1.onclick = function() {
+    modal1.style.display = "none";
+  }
+  span2.onclick = function() {
+    modal2.style.display = "none";
+  }
+  span3.onclick = function() {
+    modal3.style.display = "none";
+  }
+  span4.onclick = function() {
+    modal4.style.display = "none";
+  }
+  span5.onclick = function() {
+    modal5.style.display = "none";
+  }
+  span6.onclick = function() {
+    modal6.style.display = "none";
+  }
+
+
+
+</script>
+
+{% endblock %}

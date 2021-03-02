@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% extends 'showroom/homepage.html' %}
+{% load crispy_forms_tags %}
+    {% block body_block %}
+
+<h1></h1>
+<h1>Add New Car Details</h1>
+<hr>
+
+<form method="post">
+    {%csrf_token%}
+    <div class="mb-3">
+        {% if form %}
+        <input type="text" class="form-control" id="postid" name="post_id" placeholder="{{form.post_id}}">
+        {% endif %}
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="carname" name="carname" placeholder="Car Name">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="model" name="model" placeholder="Year of Manufacture">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="km" name="km" placeholder="Kilometre">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="price" name="price" placeholder="Car Price">
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+        <select class="form-select" name="ownership" id="inputGroupSelect01" aria-label="Default select example">
+            <option selected >Select The OwnerShip</option>
+            <option value="First Owner">First Owner</option>
+            <option value="Second Owner">Second Owner</option>
+            <option value="Third Owner">Third Owner</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="Vehicle Registration Number" name="reg_number" placeholder="Registration Number">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="color" name="color" placeholder="Color">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="tyrecondition" name="tyre_condition" placeholder="Tyre Condition">
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect02">Options</label>
+        <select class="form-select" id="inputGroupSelect02" name="replacement" aria-label="Default select example">
+            <option selected >Any Replacement</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect03">Options</label>
+        <select class="form-select" id="inputGroupSelect03" name="accident_history" aria-label="Default select example">
+            <option selected >Any Accident History</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect04">Options</label>
+        <select class="form-select" id="inputGroupSelect04" name="car_condition" aria-label="Default select example">
+            <option selected >Select Car Conditions</option>
+            <option value="Hale And Hearty">Hale And Hearty</option>
+            <option value="Excellent Condition">Excellent Condition</option>
+            <option value="ShowRoom Condition">ShowRoom Condition</option>
+        </select>
+    </div>
+    <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupSelect05">Options</label>
+        <select class="form-select" id="inputGroupSelect05" name="insurance" aria-label="Default select example">
+            <option selected >Select the Insurance validity</option>
+            <option value="New Insurance">New Insurance</option>
+            <option value="Valid Insurance">Valid Insurance</option>
+        </select>
+    </div>
+    <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupSelect06">Options</label>
+        <select class="form-select" id="inputGroupSelect06" name="status" aria-label="Default select example">
+            <option selected >Status</option>
+            <option value="active">active</option>
+            <option value="inactive">inactive</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary" value="Next Step">
+    </div>
+</form>
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+
+{% endblock %}
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->

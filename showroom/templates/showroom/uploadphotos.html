@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'showroom/homepage.html' %}
+{% load crispy_forms_tags %}
+    {% block body_block %}
+<h1>Next Step Image Upload</h1>
+<hr>
+<form method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    <div class="mb-3">
+    {{form|crispy}}
+    </div>
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary" value="Create Post">
+    </div>
+
+</form>
+
+{% endblock %}

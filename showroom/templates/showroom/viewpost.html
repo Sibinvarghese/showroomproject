@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% extends 'showroom/homepage.html' %}
+{% load crispy_forms_tags %}
+    {% block body_block %}
+<h1></h1>
+<h1>Update Car Details</h1>
+<form method="post">
+    {%csrf_token%}
+    {% for form in postids %}
+    <div class="mb-3">
+        <input type="text" class="form-control" id="postid" name="post_id" placeholder="Post ID" value="{{form.post_id}}" readonly>
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="carname" name="carname" placeholder="vehicle Name" value="{{form.carname}}">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="model" name="model" placeholder="Year of Manufacture" value="{{form.model}}">
+    </div>
+
+    <div class="mb-3">
+        <input type="text" class="form-control" id="km" name="km" value="{{form.km}}" placeholder="Kilometre">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="price" name="price" value="{{form.price}}" placeholder="Car Price">
+    </div>
+    <div class="mb-3">
+        <select class="form-select" name="ownership" aria-label="Default select example">
+            <option selected>{{form.ownership}}</option>
+            <option >Select The OwnerShip</option>
+            <option value="First Owner">First Owner</option>
+            <option value="Second Owner">Second Owner</option>
+            <option value="Third Owner">Third Owner</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="Vehicle Registration Number" value="{{form.reg_number}}" name="reg_number" placeholder="Car Name">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="color" name="color" value="{{form.color}}" placeholder="Color">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="tyrecondition" name="tyre_condition" value="{{form.tyre_condition}}" placeholder="Tyre Condition">
+    </div>
+    <div class="mb-3">
+        <select class="form-select" name="replacement" aria-label="Default select example">
+            <option selected>{{form.replacement}}</option>
+            <option >Any Replacement</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <select class="form-select" name="accident_history" aria-label="Default select example">
+            <option selected>{{form.accident_history}}</option>
+            <option>Any Accident History</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <select class="form-select" name="car_condition" aria-label="Default select example">
+            <option selected>{{form.car_condition}}</option>
+            <option>Select Car Conditions</option>
+            <option value="Hale And Hearty">Hale And Hearty</option>
+            <option value="Excellent Condition">Excellent Condition</option>
+            <option value="ShowRoom Condition">ShowRoom Condition</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <select class="form-select" name="insurance" aria-label="Default select example">
+            <option selected>{{form.insurance}}</option>
+            <option>Select the Insurance validity</option>
+            <option value="New Insurance">New Insurance</option>
+            <option value="Valid Insurance">Valid Insurance</option>
+        </select>
+    </div>
+    <div class="input-group mb-3">
+        <select class="form-select" id="inputGroupSelect06" name="status" aria-label="Default select example">
+            <option selected>{{form.status}}</option>
+            <option>Status</option>
+            <option value="active">active</option>
+            <option value="inactive">inactive</option>
+        </select>
+    </div>
+
+    {% endfor %}
+    <div class="mb-3">
+        <input type="submit" class="btn btn-primary" value="Update">
+    </div>
+</form>
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+
+{% endblock %}
